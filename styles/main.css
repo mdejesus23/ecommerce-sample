@@ -1,0 +1,29 @@
+main {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .banner-container {
+    width: 100%;
+    margin: 0 auto 50px auto;
+  }
+
+  .banner-image {
+    width: 100%;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .description {
+    margin: 10px 0 50px 0;
+    text-align: justify;
+  }
+
+  .grid-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  

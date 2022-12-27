@@ -1,3 +1,7 @@
+:root {
+  --bg-color1: rgb(95, 104, 116);
+}
+
 /* Override default style and set padding and margin to nothing */
 * {
     box-sizing: border-box;
@@ -5,6 +9,36 @@
     margin: 0
   }
 
-  html {
+html {
     font-size: 16px;
+  }
+
+  body {
+    height: 1200px;
+  }
+
+  /* Make all link text black with no text decoration */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* No styling on list items */
+li {
+  list-style-type: none;
+}
+
+
+  /* Tablet screen */
+  @media (max-width: 768px) {
+    html {
+      font-size: 14px;
+    }
+  }
+  
+  /* Mobile screen */
+  @media (max-width: 580px) {
+    html {
+      font-size: 12px;
+    }
   }

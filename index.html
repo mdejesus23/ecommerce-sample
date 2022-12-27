@@ -11,23 +11,84 @@
     <title>Sample Ecommerce</title>
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
     <header class="main-header">
-      <div class="left-section">
-        <img
-          class="batman-logo"
-          src="images/batman logo.png"
-          alt="batman logo"
-        />
+      <div class="menubtn-container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
       </div>
       <div class="middle-section">
         <input type="text" class="search-bar" placeholder="Search" />
         <button class="search-button">
           <img src="icons/search.png" class="search-icon" alt="search icon" />
+          <div class="tooltip">Search</div>
         </button>
       </div>
-      <div class="right-section"></div>
+      <div class="right-section">
+        <a>Sign up</a>
+        <a>Log in</a>
+        <div class="addtocart-container">
+          <img
+            src="icons/addtocart2.png"
+            class="addtocart-icon"
+            alt="add to cart icon"
+          />
+          <div class="addtocart-counter">0</div>
+          <div class="tooltip">Add to Cart</div>
+        </div>
+      </div>
     </header>
+
+    <nav>
+      <div class="nav-container">
+        <a>HOME</a>
+        <a>MEN</a>
+        <a>WOMEN</a>
+        <a>KIDS</a>
+        <a>OTHER APPAREL</a>
+        <a>BLOG</a>
+      </div>
+    </nav>
+
+    <main id="main">
+      <figure class="banner-container">
+        <img
+          src="images/bm-banner.jpg"
+          class="banner-image"
+          alt="batman banner"
+          loading="lazy"
+        />
+      </figure>
+      <h1>BATMAN T-SHIRTS & GRAPHIC TEES</h1>
+      <hr />
+      <p class="description">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias,
+        corrupti quisquam quidem reiciendis minima possimus accusamus id!
+        Officiis veritatis, facilis quia obcaecati aliquam dolores veniam rerum,
+        ullam mollitia dignissimos autem! Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Dolore ipsa dolorem, voluptatem magnam doloribus
+        officia, enim placeat voluptatum pariatur labore tempora voluptatibus
+        veniam reprehenderit saepe excepturi repellat vero praesentium
+        necessitatibus.
+      </p>
+
+      <!--Tshirt section-->
+      <section>
+        <div class="grid-container">
+          <div class="product-container">
+            <img class="tshirt-image" src="images/bm1.jpg" alt="" />
+            <div>
+              <a class="tshirt-title">Batman T-Shirt - urban Gotham</a>
+              <p>$30.00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script/script.js"></script>
   </body>
 </html>
