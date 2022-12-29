@@ -10,7 +10,8 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 60px;
+    height: 3.4rem;
+    z-index: 99;
 }
 
 .menubtn-container {
@@ -98,7 +99,7 @@
 }
 
 .addtocart-counter {
-    background-color: rgb(212, 6, 6);
+    background-color: var(--bg-color2);
     color: white;
     font-weight: 500;
     font-size: 11px;
@@ -149,6 +150,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100%;
+
   }
 
   .nav-container a {
@@ -159,4 +163,36 @@
     flex-shrink: 0;
     padding: 7px 15px;
   }
+
+  .dorpdown {
+    position: relative;
+    overflow: visible;
+  }
+
+  .dropdown-content {
+    display: none;
+    margin-top: 20px;
+    background-color: var(--bg-color1);
+    position: absolute;
+    width: 250px;
+  }
+
+  .dropdown-content a {
+    font-size: 1rem;
+    font-weight: 400;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: var(--bg-color2);
+  }
+
+  .show {
+    display: block;
+  }
+
+  .red {
+    background-color: var(--bg-color2);
+  }
+  
 
