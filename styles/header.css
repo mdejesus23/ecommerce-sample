@@ -139,6 +139,7 @@
     height: 65px;
     margin: 100px auto 13px auto;
     background-color: var(--bg-color1);
+    border-bottom: 3px solid var(--bg-color2);
     padding: 0 5rem;
 
     display: flex;
@@ -161,12 +162,16 @@
     font-weight: 700;
     cursor: pointer;
     flex-shrink: 0;
-    padding: 7px 15px;
   }
 
   .dorpdown {
     position: relative;
     overflow: visible;
+  }
+
+  .dropbtn {
+    height: 100%;
+    padding: 20px 10px;
   }
 
   .dropdown-content {
@@ -180,7 +185,9 @@
   .dropdown-content a {
     font-size: 1rem;
     font-weight: 400;
+    padding: 1rem;
     display: block;
+    border-bottom: 1px solid rgb(48, 48, 48);
   }
 
   .dropdown-content a:hover {
