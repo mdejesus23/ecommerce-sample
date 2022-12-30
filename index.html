@@ -15,10 +15,10 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="menubtn-container" onclick="myFunction(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
+      <div id="mainButton" class="menubtn keep-open" onclick="myFunction()">
+        <div class="bar1 keep-open"></div>
+        <div class="bar2 keep-open"></div>
+        <div class="bar3 keep-open"></div>
       </div>
       <div class="middle-section">
         <input type="text" class="search-bar" placeholder="Search" />
@@ -42,71 +42,70 @@
       </div>
     </header>
 
-    <nav>
-        <div class="dropdown">
-          <a class="dropbtn">T-SHIRT</a>
-          <div id="myDropdown1" class="dropdown-content">
-            <a>ALL T-SHIRTS</a>
-            <a>PLUS SIZED</a>
-            <a>V-NECKS</a>
-            <a>TANK TOPS</a>
-            <a>PREMIUM</a>
-          </div>
+    <nav id="mainSidenav" class="sidenav keep-open">
+      <div class="dropdown">
+        <a class="dropbtn keep-open">T-SHIRT</a>
+        <div id="myDropdown1" class="dropdown-content">
+          <a>ALL T-SHIRTS</a>
+          <a>PLUS SIZED</a>
+          <a>V-NECKS</a>
+          <a>TANK TOPS</a>
+          <a>PREMIUM</a>
         </div>
+      </div>
 
-        <div class="dropdown">
-          <a class="dropbtn">MEN</a>
-          <div id="myDropdown2" class="dropdown-content">
-            <a>ALL MEN</a>
-            <a>MEN MOVIES</a>
-            <a>V-NECKS</a>
-            <a>MEN COMIC BOOKS</a>
-            <a>PREMIUM</a>
-          </div>
+      <div class="dropdown">
+        <a class="dropbtn keep-open">MEN</a>
+        <div id="myDropdown2" class="dropdown-content">
+          <a>ALL MEN</a>
+          <a>MEN MOVIES</a>
+          <a>V-NECKS</a>
+          <a>MEN COMIC BOOKS</a>
+          <a>PREMIUM</a>
         </div>
+      </div>
 
-        <div class="dropdown">
-          <a class="dropbtn">WOMEN</a>
-          <div id="myDropdown3" class="dropdown-content">
-            <a>ALL WOMEN</a>
-            <a>SCOOP NECK</a>
-            <a>DOLMAN TOPS</a>
-            <a>WOMAN TANK TOPS</a>
-            <a>PREMIUM</a>
-          </div>
+      <div class="dropdown">
+        <a class="dropbtn keep-open">WOMEN</a>
+        <div id="myDropdown3" class="dropdown-content">
+          <a>ALL WOMEN</a>
+          <a>SCOOP NECK</a>
+          <a>DOLMAN TOPS</a>
+          <a>WOMAN TANK TOPS</a>
+          <a>PREMIUM</a>
         </div>
+      </div>
 
-        <div class="dropdown">
-          <a class="dropbtn">KIDS</a>
-          <div id="myDropdown4" class="dropdown-content">
-            <a>ALL KIDS</a>
-            <a>BABY 6-24 MONTH</a>
-            <a>TODDLER 2T-4T</a>
-            <a>KIDS 4-7</a>
-            <a>YOUTH 6-20</a>
-          </div>
+      <div class="dropdown">
+        <a class="dropbtn keep-open">KIDS</a>
+        <div id="myDropdown4" class="dropdown-content">
+          <a>ALL KIDS</a>
+          <a>BABY 6-24 MONTH</a>
+          <a>TODDLER 2T-4T</a>
+          <a>KIDS 4-7</a>
+          <a>YOUTH 6-20</a>
         </div>
+      </div>
 
-        <div class="dropdown">
-          <a class="dropbtn">OTHER APPAREL</a>
-          <div id="myDropdown5" class="dropdown-content">
-            <a>ALL OTHER APPAREL</a>
-            <a>FULL GRAPHIC SHIRTS</a>
-            <a>SWEATSHIRTS & HOODIES</a>
-            <a>LONG SLEEVE SHIRTS</a>
-            <a>POLO SHIRTS</a>
-          </div>
+      <div class="dropdown">
+        <a class="dropbtn keep-open">OTHER APPAREL</a>
+        <div id="myDropdown5" class="dropdown-content">
+          <a>ALL OTHER APPAREL</a>
+          <a>FULL GRAPHIC SHIRTS</a>
+          <a>SWEATSHIRTS & HOODIES</a>
+          <a>LONG SLEEVE SHIRTS</a>
+          <a>POLO SHIRTS</a>
         </div>
+      </div>
 
-        <div class="dropdown">
-          <a class="dropbtn">BLOG</a>
-        </div>
+      <div class="dropdown">
+        <a class="dropbtn keep-open">BLOG</a>
+      </div>
 
-        <div class="user-section">
-          <a>Sign Up</a>
-          <a>Log In</a>
-        </div>
-        
+      <div class="user-section">
+        <a class="keep-open">Sign Up</a>
+        <a class="keep-open">Log In</a>
+      </div>
     </nav>
 
     <main id="main">

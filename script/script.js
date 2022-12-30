@@ -1,7 +1,23 @@
 // Functionto change hamburger menu
-function myFunction(x) {
+function myFunction() {
+  let x = document.getElementById("mainButton");
+  let y = document.getElementById("mainSidenav");
     x.classList.toggle("change");
+    y.classList.toggle("show-sidenav");
   }
+
+  document.addEventListener('click', function(e) {
+    // Check if the click occurred outside the navbar button
+    if (!e.target.matches('.keep-open')) {
+      let mBtn = document.getElementById("mainButton");
+      let mSidenav = document.getElementById("mainSidenav");
+      // If the click occurred outside the navbar button, close the navbar
+      if (mBtn.classList.contains("change") && mSidenav.classList.contains("show-sidenav")) {
+        mBtn.classList.remove("change");
+        mSidenav.classList.remove("show-sidenav");
+      }
+    }
+  });
 
 
 

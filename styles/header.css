@@ -14,8 +14,6 @@
     z-index: 99;
 }
 
-
-
 .middle-section {
     flex: 1;
     max-width: 500px;
@@ -99,7 +97,7 @@
   @media (min-width: 1000.1px) {
      /*Main navigation*/
 
-     .menubtn-container {
+     .menubtn {
       cursor: pointer;
       display: none;
     }
@@ -214,9 +212,10 @@
 
 @media (max-width: 1000px) {
 
-  .menubtn-container {
+  .menubtn {
     cursor: pointer;
     display: block;
+    padding: 5px;
   }
   
   .bar1, .bar2, .bar3 {
@@ -302,6 +301,10 @@
         background-color: var(--bg-color2);
       }
 
+      .show-sidenav {
+        display: block;
+      }
+
       .user-section a {
         display: none;
         padding: 20px 10px;
@@ -316,9 +319,10 @@
       }
 
       @media (max-width: 580px) {
-        .menubtn-container {
+        .menubtn {
           cursor: pointer;
           display: block;
+          padding: 5px;
         }
         
         .bar1, .bar2, .bar3 {
