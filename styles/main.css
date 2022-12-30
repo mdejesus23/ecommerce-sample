@@ -7,7 +7,10 @@ main {
   }
 
   .banner-container {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+  }
+
+  .banner-image {
   }
 
   h1 {
@@ -51,5 +54,26 @@ main {
     font-weight: 700;
   }
 
+
+  @media (min-width: 1000.1px) {
+
+
+  }
+
+  @media (max-width: 1000px) {
+    main {
+      margin: 80px auto;
+    }
+
+  }
+
+  @media (max-width: 580px) {
+    main {
+      margin: 100px auto;
+    }
+
+    .banner-image {
+    }
+  }
 
   
