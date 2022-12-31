@@ -23,13 +23,6 @@ main {
     font-size: 1.1rem;
   }
 
-  .grid-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 70px;
-  }
-
   .product-container {
     display: flex;
     flex-direction: column;
@@ -57,6 +50,12 @@ main {
 
   @media (min-width: 1000.1px) {
 
+    .grid-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 70px;
+    }
 
   }
 
@@ -65,15 +64,94 @@ main {
       margin: 80px auto;
     }
 
+    main, .grid-container {
+      width: 90%;
+    }
+
+    .banner-container {
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin-bottom: 17px;
+    }
+
+    .description {
+      margin: 20px 0 50px 0;
+      text-align: justify;
+      font-size: 1.1rem;
+    }
+
+    .grid-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 50px;
+    }
+
   }
 
   @media (max-width: 580px) {
     main {
-      margin: 100px auto;
+      margin: 70px auto;
     }
 
-    .banner-image {
+    main, .grid-container {
+      width: 95%;
     }
+
+    .banner-container {
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin-bottom: 12px;
+    }
+
+    .description {
+      margin: 15px 0 40px 0;
+      text-align: justify;
+      font-size: 1.1rem;
+    }
+
+    .grid-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 320px) {
+    main {
+      margin: 70px auto;
+    }
+
+    main, .grid-container {
+      width: 95%;
+    }
+
+    .banner-container {
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin-bottom: 12px;
+    }
+
+    .description {
+      margin: 15px 0 40px 0;
+      text-align: justify;
+      font-size: 1.1rem;
+    }
+
+    .grid-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
   }
 
   
