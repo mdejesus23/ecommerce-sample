@@ -30,6 +30,7 @@
         font-size: 1.2rem;
         font-weight: 600;
         width: 100%;
+        cursor: pointer;
       }
     
     .dropdown-content {
@@ -46,6 +47,7 @@
         padding: 1rem;
         display: block;
         border-bottom: 1px solid rgb(48, 48, 48);
+        cursor: pointer;
       }
     
     .dropdown-content a:hover {

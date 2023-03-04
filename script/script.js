@@ -1,4 +1,4 @@
-// Functionto change hamburger menu
+// Function to change hamburger menu
 function myFunction() {
   let x = document.getElementById("mainButton");
   let y = document.getElementById("mainSidenav");
@@ -65,8 +65,8 @@ function myFunction() {
       let dropdownMenu = button.nextElementSibling;
       dropdownMenu.classList.add("show");
 
-      let btnColor = button; //dd
-      btnColor.classList.add("red"); //add
+      let btnColor = button;
+      btnColor.classList.add("red"); //add classname red to change the background color to red.
     });
   });
 
