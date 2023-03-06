@@ -11,32 +11,25 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  .nav-container a {
-    color: white;
-    font-size: 1.3rem;
-    font-weight: 700;
-    cursor: pointer;
-    flex-shrink: 0;
-  }
-  .dorpdown {
+  nav .dropdown {
     position: relative;
     overflow: visible;
   }
-  .dropbtn {
+  nav .dropdown .dropbtn {
     padding: 20px 10px;
     font-size: 1.2rem;
     font-weight: 600;
     width: 100%;
     cursor: pointer;
   }
-  .dropdown-content {
+  nav .dropdown .dropdown-content {
     display: none;
     margin-top: 20px;
     background-color: var(--bg-color1);
     position: absolute;
     width: 250px;
   }
-  .dropdown-content a {
+  nav .dropdown .dropdown-content a {
     font-size: 1rem;
     font-weight: 400;
     padding: 1rem;
@@ -44,19 +37,19 @@
     border-bottom: 1px solid rgb(48, 48, 48);
     cursor: pointer;
   }
-  .dropdown-content a:hover {
+  nav .dropdown .dropdown-content a:hover {
     background-color: var(--bg-color2);
   }
-  .show {
+  nav .dropdown .show {
     display: block;
   }
-  .red {
+  nav .red {
     background-color: var(--bg-color2);
   }
-  .user-section a {
+  nav .user-section a {
     display: none;
     padding: 20px 10px;
-    font-size: 1.2rem;
+    font-size: 50rem;
     font-weight: 600;
     width: 100%;
     height: 100%;
@@ -74,10 +67,10 @@
     bottom: 0;
     top: 50px;
   }
-  .dropdown {
+  nav .dropdown {
     position: relative;
   }
-  .dropbtn {
+  nav .dropdown .dropbtn {
     display: block;
     font-size: 1.2rem;
     font-weight: 600;
@@ -86,7 +79,10 @@
     padding: 14px 0 14px 10px;
     border-bottom: 1px solid var(--border-color1);
   }
-  .dropdown-content {
+  nav .dropdown .red {
+    background-color: var(--bg-color2);
+  }
+  nav .dropdown .dropdown-content {
     display: none;
     background-color: var(--bg-color1);
     position: absolute;
@@ -95,26 +91,20 @@
     width: 250px;
     z-index: 99;
   }
-  .dropdown-content a {
+  nav .dropdown .dropdown-content a {
     font-size: 0.9rem;
     font-weight: 400;
     display: block;
     padding: 14px 0 14px 10px;
     border-bottom: 1px solid var(--border-color1);
   }
-  .dropdown-content a:hover {
+  nav .dropdown .dropdown-content a:hover {
     background-color: var(--bg-color2);
   }
-  .show {
+  nav .dropdown .show {
     display: block;
   }
-  .red {
-    background-color: var(--bg-color2);
-  }
-  .show-sidenav {
-    display: block;
-  }
-  .user-section a {
+  nav .user-section a {
     display: none;
     padding: 20px 10px;
     font-size: 1.2rem;
@@ -123,6 +113,9 @@
     height: 100%;
     padding: 14px 0 14px 10px;
     border-bottom: 1px solid var(--border-color1);
+  }
+  .show-sidenav {
+    display: block;
   }
 }
 @media (max-width: 580px) {
@@ -135,7 +128,7 @@
     bottom: 0;
     top: 50px;
   }
-  .user-section a {
+  nav .user-section a {
     display: block;
     padding: 20px 10px;
     font-size: 1.2rem;
@@ -546,4 +539,6 @@ h1 {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
