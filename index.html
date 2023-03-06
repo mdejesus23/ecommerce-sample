@@ -13,7 +13,7 @@
   </head>
   <body>
     <header class="main-header">
-      <div id="mainButton" class="menubtn keep-open" onclick="changeMenuBtn()">
+      <div id="mainButton" class="menubtn keep-open" onclick="toggleMenuBtn()">
         <div class="bar1 keep-open"></div>
         <div class="bar2 keep-open"></div>
         <div class="bar3 keep-open"></div>
@@ -50,8 +50,8 @@
 
     <nav id="mainSidenav" class="sidenav keep-open">
       <div class="dropdown">
-        <a class="dropbtn keep-open">T-SHIRT</a>
-        <div id="myDropdown1" class="dropdown-content">
+        <a class="dropbtn keep-open" onclick="openDropdown('dd-tshirt', this)">T-SHIRT</a>
+        <div id="dd-tshirt" class="dropdown-content">
           <a>ALL T-SHIRTS</a>
           <a>PLUS SIZED</a>
           <a>V-NECKS</a>
@@ -61,8 +61,8 @@
       </div>
 
       <div class="dropdown">
-        <a class="dropbtn keep-open">MEN</a>
-        <div id="myDropdown2" class="dropdown-content">
+        <a class="dropbtn keep-open" onclick="openDropdown('dd-men', this)">MEN</a>
+        <div id="dd-men" class="dropdown-content">
           <a>ALL MEN</a>
           <a>MEN MOVIES</a>
           <a>V-NECKS</a>
@@ -72,8 +72,8 @@
       </div>
 
       <div class="dropdown">
-        <a class="dropbtn keep-open">WOMEN</a>
-        <div id="myDropdown3" class="dropdown-content">
+        <a class="dropbtn keep-open" onclick="openDropdown('dd-women', this)">WOMEN</a>
+        <div id="dd-women" class="dropdown-content">
           <a>ALL WOMEN</a>
           <a>SCOOP NECK</a>
           <a>DOLMAN TOPS</a>
@@ -83,8 +83,8 @@
       </div>
 
       <div class="dropdown">
-        <a class="dropbtn keep-open">KIDS</a>
-        <div id="myDropdown4" class="dropdown-content">
+        <a class="dropbtn keep-open" onclick="openDropdown('dd-kids', this)">KIDS</a>
+        <div id="dd-kids" class="dropdown-content">
           <a>ALL KIDS</a>
           <a>BABY 6-24 MONTH</a>
           <a>TODDLER 2T-4T</a>
@@ -94,8 +94,8 @@
       </div>
 
       <div class="dropdown">
-        <a class="dropbtn keep-open">OTHER APPAREL</a>
-        <div id="myDropdown5" class="dropdown-content">
+        <a class="dropbtn keep-open" onclick="openDropdown('dd-other-apparel', this)">OTHER APPAREL</a>
+        <div id="dd-other-apparel" class="dropdown-content">
           <a>ALL OTHER APPAREL</a>
           <a>FULL GRAPHIC SHIRTS</a>
           <a>SWEATSHIRTS & HOODIES</a>

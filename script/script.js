@@ -2,61 +2,70 @@ const menuBtn = document.getElementById("mainButton");
 const sideBar = document.getElementById("mainSidenav");
 
 // Function to change hamburger menu
-const changeMenuBtn = () => {
+function toggleMenuBtn() {
   menuBtn.classList.toggle("change");
+  toggleSidenav();
+}
+
+function toggleSidenav() {
   sideBar.classList.toggle("show-sidenav");
 }
 
 document.addEventListener('click', event => {
-  // Check if the click occurred outside the navbar button
+  // Close nav, dropdown and change menu button if the click occurred outside the navbar.
     if (!event.target.matches('.keep-open')) {
       closeSideNav();
+      closeMenuBtn();
     }
 });
 
-const closeSideNav = () => {
-  // If the click occurred outside the navbar button, close the navbar
-  if (menuBtn.classList.contains("change") && sideBar.classList.contains("show-sidenav")) {
+function closeMenuBtn() {
+  if (menuBtn.classList.contains("change")) {
     menuBtn.classList.remove("change");
+  }
+}
+
+function closeSideNav() {
+  if (sideBar.classList.contains("show-sidenav")) {
     sideBar.classList.remove("show-sidenav");
   }
 }
 
+// Dropdown content functions
 
-// Get all the dropdown elements
-const dropdowns = document.querySelectorAll(".dropdown-content");
-const dropButton = document.querySelectorAll(".dropbtn");
-
-let openMenus = document.querySelectorAll(".dropdown-content.show");
-let colorRedBackground = document.querySelectorAll(".dropbtn.red"); //add
-
-const closeDropdowns = () => {
-  
-  dropButton.forEach(button => {
-    dropdowns.forEach(dropdownContent => {
-      if (button.classList.contains("red") && dropdownContent.classList.contains("show")) {
-        dropdownContent.classList.remove("show");
-        button.classList.remove("red");
-      }
-    });
-  });
+// show dropdown contents and apply red background color to button.
+function openDropdown(dropdownContent, dropdownBtn) {
+  closeAllDropdowns();
+  document.getElementById(dropdownContent).classList.add("show");
+  dropdownBtn.classList.add("red");
 }
 
-document.addEventListener("click", event => {
-    // If the user clicks outside of the dropdown, close it
-    dropButton.forEach(button => {
-        if (!event.target.matches(button)) {
-          closeDropdowns();
-        } else if (event.target.matches(button)) {
-          let dropdownMenu = button.nextElementSibling;
-          dropdownMenu.classList.add("show");
+// hide dropdown content and remove red background color to button.
+function closeDropdown(dropdown, button) {
+  dropdown.classList.remove("show");
+  button.classList.remove("red");
+}
 
-          let btnColor = button;
-          btnColor.classList.add("red"); //add classname red to change the background color to red.
-        }
+// loop to all dropdown contents and dropdown button.
+function closeAllDropdowns() {
+  const dropdowns = document.querySelectorAll(".dropdown-content");
+  const dropdownBtn = document.querySelectorAll(".dropbtn");
+
+  dropdownBtn.forEach(button => {
+    dropdowns.forEach(dropdown => {
+      closeDropdown(dropdown, button);
     });
-});
+  });
+  
+}
 
+/* close all dropdowns and remove red background to buttons if the user
+clicks doesn't match the button */
+window.onclick = (event) => {
+  if (!event.target.matches(".dropbtn")) {
+    closeAllDropdowns();
+  }
+}
 
   
   
