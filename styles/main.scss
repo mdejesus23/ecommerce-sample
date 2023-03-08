@@ -1,10 +1,10 @@
-@import "variables";
 @import "nav";
 @import "header";
 @import "general";
 @import "utility";
 
 main {
+  width: 80%;
   margin: 0 auto;
 
   .banner-container {
@@ -21,38 +21,38 @@ main {
     font-size: 1.1rem;
   }
 
-  section {
-    .grid-container {
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 70px;
+   
+  .grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 70px;
 
-      .product-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    .product-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
-        .product-label {
-          margin-top: 15px;
+      .product-label {
+        margin-top: 15px;
 
-          .product-title {
-            text-align: center;
-            font-size: 1.2rem;
-            font-weight: 500;
-          }
+        .product-title {
+          text-align: center;
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
 
-          .product-price {
-            text-align: center;
-            color: #ff4632;
-            font-size: 1.2rem;
-            font-weight: 700;
-          }
+        .product-price {
+          text-align: center;
+          color: #ff4632;
+          font-size: 1.2rem;
+          font-weight: 700;
         }
       }
     }
   }
 }
+
 
 
 @media (min-width: 1000.1px) {

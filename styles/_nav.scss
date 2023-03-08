@@ -37,7 +37,7 @@
           font-weight: 400;
           padding: 1rem;
           display: block;
-          border-bottom: 1px solid rgb(48, 48, 48);
+          border-bottom: 1px solid $border-color2;
           cursor: pointer;
       
           &:hover {
@@ -82,7 +82,8 @@
 
     .dropdown {
       position: relative;
-
+      border-bottom: 1px solid $border-color2;
+      
       .dropbtn {
         display: block;
         font-size: 1.2rem;
@@ -90,7 +91,6 @@
         width: 100%;
         height: 100%;
         padding: 14px 0 14px 10px;
-        border-bottom: 1px solid $bg-color1;
       }
 
       .red {
@@ -111,7 +111,7 @@
           font-weight: 400;
           display: block;
           padding: 14px 0 14px 10px;
-          border-bottom: 1px solid $bg-color1;
+          border-bottom: 1px solid $border-color2;
           &:hover {
             background-color: $bg-color2;
           }

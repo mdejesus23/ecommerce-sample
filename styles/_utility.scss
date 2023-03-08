@@ -1,7 +1,6 @@
 @mixin flex-container {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 @mixin tooltip-style {

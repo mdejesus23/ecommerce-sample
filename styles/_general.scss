@@ -1,13 +1,9 @@
-:root {
-  --bg-color1: rgb(95, 104, 116);
-  --bg-color2: rgb(255, 70, 50);
-  --border-color1: rgb(48, 48, 48);
-}
 
 /* SASS Variables*/
 $bg-color1: rgb(95, 104, 116);
 $bg-color2: rgb(255, 70, 50);
 $border-color1: rgb(170, 89, 89);
+$border-color2: rgb(48, 48, 48);
 
 /* Override default style and set padding and margin to nothing */
 * {
