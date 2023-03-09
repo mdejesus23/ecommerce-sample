@@ -121,6 +121,10 @@ img {
     width: 100%;
     height: 100%;
     padding: 14px 0 14px 10px;
+<<<<<<< HEAD
+=======
+    border-bottom: 1px solid rgb(95, 104, 116);
+>>>>>>> filter-items
   }
   nav .dropdown .red {
     background-color: rgb(255, 70, 50);
@@ -139,7 +143,11 @@ img {
     font-weight: 400;
     display: block;
     padding: 14px 0 14px 10px;
+<<<<<<< HEAD
     border-bottom: 1px solid rgb(48, 48, 48);
+=======
+    border-bottom: 1px solid rgb(95, 104, 116);
+>>>>>>> filter-items
   }
   nav .dropdown .dropdown-content a:hover {
     background-color: rgb(255, 70, 50);
@@ -182,6 +190,15 @@ img {
     border-bottom: 1px solid rgb(95, 104, 116);
   }
 }
+<<<<<<< HEAD
+=======
+:root {
+  --bg-color1: rgb(95, 104, 116);
+  --bg-color2: rgb(255, 70, 50);
+  --border-color1: rgb(48, 48, 48);
+}
+
+>>>>>>> filter-items
 /* SASS Variables*/
 /* Override default style and set padding and margin to nothing */
 * {
@@ -284,7 +301,11 @@ img {
   margin-right: 20px;
   display: flex;
   align-items: center;
+<<<<<<< HEAD
   justify-content: space-between;
+=======
+  justify-content: center;
+>>>>>>> filter-items
 }
 .right-section .right-section a {
   font-weight: 700;
@@ -292,6 +313,12 @@ img {
   cursor: pointer;
 }
 .right-section .addtocart-container {
+<<<<<<< HEAD
+=======
+  display: flex;
+  align-items: center;
+  justify-content: center;
+>>>>>>> filter-items
   position: relative;
 }
 .right-section .addtocart-container .addtocart-icon {
@@ -333,7 +360,11 @@ img {
   .main-header {
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     justify-content: space-between;
+=======
+    justify-content: center;
+>>>>>>> filter-items
     padding: 0 2rem;
     border-bottom: 1px solid gray;
     background-color: rgb(95, 104, 116);
@@ -354,12 +385,28 @@ img {
     background-color: white;
     margin: 8px 0;
   }
+<<<<<<< HEAD
+=======
+  .main-header .menubtn .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  .main-header .menubtn .change .bar2 {
+    opacity: 0;
+  }
+  .main-header .menubtn .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+>>>>>>> filter-items
   .main-header .right-section {
     width: 250px;
     flex-shrink: 0;
     margin-right: 20px;
     display: flex;
     align-items: center;
+<<<<<<< HEAD
+=======
+    justify-content: center;
+>>>>>>> filter-items
   }
 }
 /*Desktop to tablet layout*/
@@ -367,7 +414,11 @@ img {
   .main-header {
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     justify-content: space-between;
+=======
+    justify-content: center;
+>>>>>>> filter-items
     padding: 0 2rem;
     border-bottom: 1px solid gray;
     background-color: rgb(95, 104, 116);
@@ -389,6 +440,7 @@ img {
     background-color: white;
     margin: 8px 0;
   }
+<<<<<<< HEAD
   .main-header .change .bar1 {
     transform: translate(0, 11px) rotate(-45deg);
   }
@@ -396,6 +448,15 @@ img {
     opacity: 0;
   }
   .main-header .change .bar3 {
+=======
+  .main-header .menubtn .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  .main-header .menubtn .change .bar2 {
+    opacity: 0;
+  }
+  .main-header .menubtn .change .bar3 {
+>>>>>>> filter-items
     transform: translate(0, -11px) rotate(45deg);
   }
   .main-header .right-section {
@@ -403,13 +464,18 @@ img {
     flex-shrink: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 }
 @media (max-width: 580px) {
   .main-header {
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     justify-content: space-between;
+=======
+    justify-content: center;
+>>>>>>> filter-items
     padding: 0 2rem;
     border-bottom: 1px solid gray;
     background-color: rgb(95, 104, 116);
@@ -426,11 +492,16 @@ img {
     display: block;
   }
   .main-header .menubtn .bar1, .main-header .menubtn .bar2, .main-header .menubtn .bar3 {
+<<<<<<< HEAD
     width: 25px;
+=======
+    width: 30px;
+>>>>>>> filter-items
     height: 3px;
     background-color: white;
     margin: 8px 0;
   }
+<<<<<<< HEAD
   .main-header .change .bar1 {
     transform: translate(0, 11px) rotate(-45deg);
   }
@@ -438,6 +509,15 @@ img {
     opacity: 0;
   }
   .main-header .change .bar3 {
+=======
+  .main-header .menubtn .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  .main-header .menubtn .change .bar2 {
+    opacity: 0;
+  }
+  .main-header .menubtn .change .bar3 {
+>>>>>>> filter-items
     transform: translate(0, -11px) rotate(45deg);
   }
   .main-header .right-section {
@@ -450,6 +530,15 @@ img {
     display: none;
   }
 }
+<<<<<<< HEAD
+=======
+:root {
+  --bg-color1: rgb(95, 104, 116);
+  --bg-color2: rgb(255, 70, 50);
+  --border-color1: rgb(48, 48, 48);
+}
+
+>>>>>>> filter-items
 /* SASS Variables*/
 /* Override default style and set padding and margin to nothing */
 * {
@@ -508,26 +597,45 @@ main .description {
   text-align: justify;
   font-size: 1.1rem;
 }
+<<<<<<< HEAD
 main .grid-container {
+=======
+main section .grid-container {
+>>>>>>> filter-items
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 70px;
 }
+<<<<<<< HEAD
 main .grid-container .product-container {
+=======
+main section .grid-container .product-container {
+>>>>>>> filter-items
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+<<<<<<< HEAD
 main .grid-container .product-container .product-label {
   margin-top: 15px;
 }
 main .grid-container .product-container .product-label .product-title {
+=======
+main section .grid-container .product-container .product-label {
+  margin-top: 15px;
+}
+main section .grid-container .product-container .product-label .product-title {
+>>>>>>> filter-items
   text-align: center;
   font-size: 1.2rem;
   font-weight: 500;
 }
+<<<<<<< HEAD
 main .grid-container .product-container .product-label .product-price {
+=======
+main section .grid-container .product-container .product-label .product-price {
+>>>>>>> filter-items
   text-align: center;
   color: #ff4632;
   font-size: 1.2rem;
