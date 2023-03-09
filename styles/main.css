@@ -1,10 +1,59 @@
+:root {
+  --bg-color1: rgb(95, 104, 116);
+  --bg-color2: rgb(255, 70, 50);
+  --border-color1: rgb(48, 48, 48);
+}
+
+/* SASS Variables*/
+/* Override default style and set padding and margin to nothing */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  height: 3000px;
+}
+
+/* Make all link text black with no text decoration */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* No styling on list items */
+li {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Tablet screen */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+/* Mobile screen */
+@media (max-width: 580px) {
+  html {
+    font-size: 12px;
+  }
+}
 @media (min-width: 1000.1px) {
   nav {
     width: 80%;
     height: 65px;
     margin: 100px auto 13px auto;
-    background-color: var(--bg-color1);
-    border-bottom: 3px solid var(--bg-color2);
+    background-color: rgb(95, 104, 116);
+    border-bottom: 3px solid rgb(255, 70, 50);
     padding: 0 5rem;
     display: flex;
     align-items: center;
@@ -25,7 +74,7 @@
   nav .dropdown .dropdown-content {
     display: none;
     margin-top: 20px;
-    background-color: var(--bg-color1);
+    background-color: rgb(95, 104, 116);
     position: absolute;
     width: 250px;
   }
@@ -38,13 +87,13 @@
     cursor: pointer;
   }
   nav .dropdown .dropdown-content a:hover {
-    background-color: var(--bg-color2);
+    background-color: rgb(255, 70, 50);
   }
   nav .dropdown .show {
     display: block;
   }
   nav .red {
-    background-color: var(--bg-color2);
+    background-color: rgb(255, 70, 50);
   }
   nav .user-section a {
     display: none;
@@ -54,14 +103,14 @@
     width: 100%;
     height: 100%;
     padding: 14px 0 14px 10px;
-    border-bottom: 1px solid var(--border-color1);
+    border-bottom: 1px solid rgb(95, 104, 116);
   }
 }
 @media (max-width: 1000px) {
   nav {
     display: none;
     width: 200px;
-    background-color: var(--bg-color1);
+    background-color: rgb(95, 104, 116);
     position: fixed;
     left: 0;
     bottom: 0;
@@ -77,14 +126,14 @@
     width: 100%;
     height: 100%;
     padding: 14px 0 14px 10px;
-    border-bottom: 1px solid var(--border-color1);
+    border-bottom: 1px solid rgb(95, 104, 116);
   }
   nav .dropdown .red {
-    background-color: var(--bg-color2);
+    background-color: rgb(255, 70, 50);
   }
   nav .dropdown .dropdown-content {
     display: none;
-    background-color: var(--bg-color1);
+    background-color: rgb(95, 104, 116);
     position: absolute;
     right: -250px;
     top: 0;
@@ -96,10 +145,10 @@
     font-weight: 400;
     display: block;
     padding: 14px 0 14px 10px;
-    border-bottom: 1px solid var(--border-color1);
+    border-bottom: 1px solid rgb(95, 104, 116);
   }
   nav .dropdown .dropdown-content a:hover {
-    background-color: var(--bg-color2);
+    background-color: rgb(255, 70, 50);
   }
   nav .dropdown .show {
     display: block;
@@ -112,7 +161,7 @@
     width: 100%;
     height: 100%;
     padding: 14px 0 14px 10px;
-    border-bottom: 1px solid var(--border-color1);
+    border-bottom: 1px solid rgb(95, 104, 116);
   }
   .show-sidenav {
     display: block;
@@ -122,7 +171,7 @@
   nav {
     display: none;
     width: 200px;
-    background-color: var(--bg-color1);
+    background-color: rgb(95, 104, 116);
     position: fixed;
     left: 0;
     bottom: 0;
@@ -136,7 +185,56 @@
     width: 100%;
     height: 100%;
     padding: 14px 0 14px 10px;
-    border-bottom: 1px solid var(--border-color1);
+    border-bottom: 1px solid rgb(95, 104, 116);
+  }
+}
+:root {
+  --bg-color1: rgb(95, 104, 116);
+  --bg-color2: rgb(255, 70, 50);
+  --border-color1: rgb(48, 48, 48);
+}
+
+/* SASS Variables*/
+/* Override default style and set padding and margin to nothing */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  height: 3000px;
+}
+
+/* Make all link text black with no text decoration */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* No styling on list items */
+li {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Tablet screen */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+/* Mobile screen */
+@media (max-width: 580px) {
+  html {
+    font-size: 12px;
   }
 }
 .middle-section {
@@ -146,8 +244,7 @@
   display: flex;
   align-items: center;
 }
-
-.search-bar {
+.middle-section .search-bar {
   flex: 1;
   height: 40px;
   padding-left: 10px;
@@ -157,8 +254,7 @@
   box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
   width: 0;
 }
-
-.search-button {
+.middle-section .search-button {
   height: 40px;
   width: 65px;
   background-color: rgb(231, 224, 224);
@@ -166,37 +262,15 @@
   border: 1px solid gray;
   border-radius: 3px;
   margin-left: -2px;
-}
-
-.search-icon {
-  width: 20px;
-}
-
-.search-button, .addtocart-container {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
-
-.addtocart-icon {
-  height: 23px;
+.middle-section .search-button .search-icon {
+  width: 20px;
 }
-
-.addtocart-counter {
-  background-color: var(--bg-color2);
-  color: white;
-  font-weight: 500;
-  font-size: 11px;
-  padding: 3px 5px;
-  border-radius: 7px;
-  position: absolute;
-  top: -5px;
-  right: -8px;
-}
-
-.search-button .tooltip,
-.addtocart-container .tooltip {
+.middle-section .search-button .tooltip {
   position: absolute;
   background-color: gray;
   color: white;
@@ -212,21 +286,72 @@
   white-space: nowrap;
   transition: opacity 0.15s;
 }
-
-.search-button:hover .tooltip,
-.addtocart-container:hover .tooltip {
+.middle-section .search-button:hover .tooltip {
   opacity: 1;
 }
 
+.right-section {
+  width: 250px;
+  flex-shrink: 0;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-section .right-section a {
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.right-section .addtocart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.right-section .addtocart-container .addtocart-icon {
+  height: 23px;
+}
+.right-section .addtocart-container .addtocart-counter {
+  background-color: rgb(255, 70, 50);
+  color: white;
+  font-weight: 500;
+  font-size: 11px;
+  padding: 3px 5px;
+  border-radius: 7px;
+  position: absolute;
+  top: -5px;
+  right: -8px;
+}
+.right-section .addtocart-container .tooltip {
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+.right-section .addtocart-container:hover .tooltip {
+  opacity: 1;
+}
+
+/*Desktop layout*/
 @media (min-width: 1000.1px) {
-  /*Main navigation*/
   .main-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
     padding: 0 2rem;
     border-bottom: 1px solid gray;
-    background-color: var(--bg-color1);
+    background-color: rgb(95, 104, 116);
     position: fixed;
     top: 0;
     left: 0;
@@ -234,50 +359,43 @@
     height: 50px;
     z-index: 99;
   }
-  .menubtn {
+  .main-header .menubtn {
     cursor: pointer;
     display: none;
   }
-  .bar1, .bar2, .bar3 {
+  .main-header .menubtn .bar1, .main-header .menubtn .bar2, .main-header .menubtn .bar3 {
     width: 30px;
     height: 3px;
     background-color: white;
     margin: 8px 0;
   }
-  .change .bar1 {
+  .main-header .menubtn .change .bar1 {
     transform: translate(0, 11px) rotate(-45deg);
   }
-  .change .bar2 {
+  .main-header .menubtn .change .bar2 {
     opacity: 0;
   }
-  .change .bar3 {
+  .main-header .menubtn .change .bar3 {
     transform: translate(0, -11px) rotate(45deg);
   }
-  .fillers {
-    display: block;
-  }
-  .right-section {
+  .main-header .right-section {
     width: 250px;
     flex-shrink: 0;
     margin-right: 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-  }
-  .right-section a {
-    font-weight: 700;
-    font-size: 1rem;
-    cursor: pointer;
+    justify-content: center;
   }
 }
+/*Desktop to tablet layout*/
 @media (max-width: 1000px) {
   .main-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
     padding: 0 2rem;
     border-bottom: 1px solid gray;
-    background-color: var(--bg-color1);
+    background-color: rgb(95, 104, 116);
     position: fixed;
     top: 0;
     left: 0;
@@ -285,45 +403,42 @@
     height: 50px;
     z-index: 99;
   }
-  .menubtn {
+  .main-header .menubtn {
     width: 50px;
     cursor: pointer;
     display: block;
   }
-  .bar1, .bar2, .bar3 {
+  .main-header .menubtn .bar1, .main-header .menubtn .bar2, .main-header .menubtn .bar3 {
     width: 30px;
     height: 3px;
     background-color: white;
     margin: 8px 0;
   }
-  .change .bar1 {
+  .main-header .menubtn .change .bar1 {
     transform: translate(0, 11px) rotate(-45deg);
   }
-  .change .bar2 {
+  .main-header .menubtn .change .bar2 {
     opacity: 0;
   }
-  .change .bar3 {
+  .main-header .menubtn .change .bar3 {
     transform: translate(0, -11px) rotate(45deg);
   }
-  .fillers {
-    display: none;
-  }
-  .right-section {
+  .main-header .right-section {
     width: 140px;
     flex-shrink: 0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
   }
 }
 @media (max-width: 580px) {
   .main-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
     padding: 0 2rem;
     border-bottom: 1px solid gray;
-    background-color: var(--bg-color1);
+    background-color: rgb(95, 104, 116);
     position: fixed;
     top: 0;
     left: 0;
@@ -331,36 +446,33 @@
     height: 50px;
     z-index: 99;
   }
-  .menubtn {
+  .main-header .menubtn {
     width: 50px;
     cursor: pointer;
     display: block;
   }
-  .bar1, .bar2, .bar3 {
+  .main-header .menubtn .bar1, .main-header .menubtn .bar2, .main-header .menubtn .bar3 {
     width: 30px;
     height: 3px;
     background-color: white;
     margin: 8px 0;
   }
-  .change .bar1 {
+  .main-header .menubtn .change .bar1 {
     transform: translate(0, 11px) rotate(-45deg);
   }
-  .change .bar2 {
+  .main-header .menubtn .change .bar2 {
     opacity: 0;
   }
-  .change .bar3 {
+  .main-header .menubtn .change .bar3 {
     transform: translate(0, -11px) rotate(45deg);
   }
-  .fillers {
-    display: none;
-  }
-  .right-section {
+  .main-header .right-section {
     width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .right-section a {
+  .main-header .right-section a {
     display: none;
   }
 }
@@ -370,6 +482,7 @@
   --border-color1: rgb(48, 48, 48);
 }
 
+/* SASS Variables*/
 /* Override default style and set padding and margin to nothing */
 * {
   box-sizing: border-box;
@@ -415,42 +528,37 @@ img {
 main {
   margin: 0 auto;
 }
-
-main, .grid-container {
-  width: 80%;
-}
-
-.banner-container {
+main .banner-container {
   margin-bottom: 30px;
 }
-
-h1 {
+main h1 {
   margin-bottom: 20px;
 }
-
-.description {
+main .description {
   margin: 30px 0 100px 0;
   text-align: justify;
   font-size: 1.1rem;
 }
-
-.product-container {
+main section .grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 70px;
+}
+main section .grid-container .product-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-
-.product-label {
+main section .grid-container .product-container .product-label {
   margin-top: 15px;
 }
-
-.product-title {
+main section .grid-container .product-container .product-label .product-title {
   text-align: center;
   font-size: 1.2rem;
   font-weight: 500;
 }
-
-.product-price {
+main section .grid-container .product-container .product-label .product-price {
   text-align: center;
   color: #ff4632;
   font-size: 1.2rem;
@@ -469,21 +577,18 @@ h1 {
   main {
     margin: 80px auto;
   }
-  main, .grid-container {
-    width: 90%;
-  }
-  .banner-container {
+  main .banner-container {
     margin-bottom: 20px;
   }
-  h1 {
+  main h1 {
     margin-bottom: 17px;
   }
-  .description {
+  main .description {
     margin: 20px 0 50px 0;
     text-align: justify;
     font-size: 1.1rem;
   }
-  .grid-container {
+  main section .grid-container {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -494,21 +599,18 @@ h1 {
   main {
     margin: 70px auto;
   }
-  main, .grid-container {
-    width: 95%;
-  }
-  .banner-container {
+  main .banner-container {
     margin-bottom: 10px;
   }
-  h1 {
+  main h1 {
     margin-bottom: 12px;
   }
-  .description {
+  main .description {
     margin: 15px 0 40px 0;
     text-align: justify;
     font-size: 1.1rem;
   }
-  .grid-container {
+  main section .grid-container {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -519,21 +621,18 @@ h1 {
   main {
     margin: 70px auto;
   }
-  main, .grid-container {
-    width: 95%;
-  }
-  .banner-container {
+  main .banner-container {
     margin-bottom: 10px;
   }
-  h1 {
+  main h1 {
     margin-bottom: 12px;
   }
-  .description {
+  main .description {
     margin: 15px 0 40px 0;
     text-align: justify;
     font-size: 1.1rem;
   }
-  .grid-container {
+  main section .grid-container {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
