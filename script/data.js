@@ -1,4 +1,4 @@
-export let itemList = [
+let itemList = [
     {
         id: "kids-01",
         title: "Batman Kids 4-7 - Joker Blue",
@@ -111,4 +111,6 @@ export let itemList = [
         image: "images/women-tshirt3.jpg",
         className: "all-shirts t-shirt women women-tshirt"
     }
-]
+];
+
+
