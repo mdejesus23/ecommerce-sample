@@ -67,5 +67,4 @@ window.onclick = (event) => {
   }
 }
 
-  
-  
+
