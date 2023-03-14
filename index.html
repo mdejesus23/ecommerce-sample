@@ -29,15 +29,17 @@
       <div class="right-section">
         <a>Sign up</a>
         <a>Log in</a>
-        <div class="addtocart-container">
-          <img
-            src="icons/addtocart3.png"
-            class="addtocart-icon"
-            alt="add to cart icon"
-          />
-          <div class="addtocart-counter">0</div>
-          <div class="tooltip">Add to Cart</div>
-        </div>
+        <a href="cart.html">
+          <div class="addtocart-container">
+            <img
+              src="icons/addtocart3.png"
+              class="addtocart-icon"
+              alt="add to cart icon"
+            />
+            <div id="cart-counter" class="addtocart-counter">0</div>
+            <div class="tooltip">Add to Cart</div>
+          </div>
+        </a>
       </div>
     </header>
 
@@ -140,7 +142,8 @@
         </div>
       </section>
     </main>
+    <script src="script/data.js"></script>
     <script src="script/main.js"></script>
-  <script src="script/script.js"></script>
+    <script src="script/script.js"></script>
   </body>
 </html>
