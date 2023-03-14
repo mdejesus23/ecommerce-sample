@@ -14,8 +14,14 @@
     border-radius: 2px;
     font-size: 12px;
     bottom: -30px;
+    left: -20px;
     opacity: 0;
     pointer-events: none;
     white-space: nowrap;
     transition: opacity 0.15s;
+}
+
+@mixin button-style {
+    background-color: $bg-color2;
+    color: $font-color1;
 }

@@ -41,6 +41,8 @@ function renderItems() {
 
 renderItems();
 
+
+
 function cartCounter() {
     document.getElementById("cart-counter").innerHTML =
     // Get the sum of all items quantity.

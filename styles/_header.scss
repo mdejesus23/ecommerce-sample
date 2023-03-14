@@ -3,57 +3,19 @@
 
 
 .middle-section {
-  flex: 1;
-  max-width: 500px;
-  margin: 0 10px;
-
-  display: flex;
-  align-items: center;
-
-  .search-bar {
-    flex: 1;
-    height: 40px;
-    padding-left: 10px;
-    font-size: 1.1rem;
-    border: 1px solid gray;
-    border-radius: 3px;
-    box-shadow: inset 1px 2px 3px rgba(0,0,0,0.05);
-    width: 0;
-  }
-
-  .search-button {
-    height: 40px;
-    width: 65px;
-    background-color: rgb(231, 224, 224);
-    cursor: pointer;
-    border: 1px solid gray;
-    border-radius: 3px;
-    margin-left: -2px;
-    @include flex-container;
-    justify-content: center;
-    position: relative;
-
-    .search-icon {
-      width: 20px;
-    }
-
-    .tooltip {
-      @include tooltip-style;
-    }
-
-    &:hover .tooltip {
-      opacity: 1;
-    }
+  @include flex-container;
+  justify-content: center;
+ 
+  .logo {
+    width: 150px;
+    height: auto;
   }
 }
 
 
 .right-section {
-  width: 250px;
-  flex-shrink: 0;
-  margin-right: 20px;
   @include flex-container;
-  justify-content: space-between;
+  justify-content: center;
 
   .right-section a {
     font-weight: 700;
@@ -107,6 +69,8 @@
     z-index: 99;
 
     .menubtn {
+      @include flex-container;
+      justify-self: center;
       cursor: pointer;
       display: none;
 
@@ -119,10 +83,8 @@
     }
 
     .right-section {
-      width: 250px;
-      flex-shrink: 0;
-      margin-right: 20px;
       @include flex-container;
+      justify-self: center;
     }
   }
 }
@@ -144,7 +106,8 @@
     z-index: 99;
     
     .menubtn {
-      width: 50px;
+      @include flex-container;
+      justify-self: center;
       cursor: pointer;
       display: block;
 
@@ -154,8 +117,6 @@
         background-color: white;
         margin: 8px 0;
       }
-
-      
     }
 
     .change {
@@ -171,9 +132,8 @@
     }
 
     .right-section {
-      width: 140px;
-      flex-shrink: 0;
       @include flex-container;
+      justify-content: center;
     }
   }
 }
@@ -194,7 +154,8 @@
     z-index: 99;
 
     .menubtn {
-      width: 50px;
+      @include flex-container;
+      justify-content: center;
       cursor: pointer;
       display: block;
 
@@ -219,14 +180,9 @@
     }
 
     .right-section {
-      width: 50px;
-      display: flex;
+      @include flex-container;
       justify-content: center;
-      align-items: center;
-
-      a {
-        display: none;
-      }   
+      min-width: 40px;
     }
   }
 }
