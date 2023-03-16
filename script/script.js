@@ -11,12 +11,12 @@ function toggleSidenav() {
   sideBar.classList.toggle("show-sidenav");
 }
 
-document.addEventListener('click', event => {
+document.addEventListener("click", (event) => {
   // Close nav, dropdown and change menu button if the click occurred outside the navbar.
-    if (!event.target.matches('.keep-open')) {
-      closeSideNav();
-      closeMenuBtn();
-    }
+  if (!event.target.matches(".keep-open")) {
+    closeSideNav();
+    closeMenuBtn();
+  }
 });
 
 function closeMenuBtn() {
@@ -51,12 +51,11 @@ function closeAllDropdowns() {
   const dropdowns = document.querySelectorAll(".dropdown-content");
   const dropdownBtn = document.querySelectorAll(".dropbtn");
 
-  dropdownBtn.forEach(button => {
-    dropdowns.forEach(dropdown => {
+  dropdownBtn.forEach((button) => {
+    dropdowns.forEach((dropdown) => {
       closeDropdown(dropdown, button);
     });
   });
-  
 }
 
 /* close all dropdowns and remove red background to buttons if the user
@@ -65,6 +64,4 @@ window.onclick = (event) => {
   if (!event.target.matches(".dropbtn")) {
     closeAllDropdowns();
   }
-}
-
-
+};

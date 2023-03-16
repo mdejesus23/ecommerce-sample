@@ -1,0 +1,19 @@
+{
+  "name": "ecommerce-sample",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass styles/main.scss styles/main.css",
+    "watch": "nodemon --watch styles/main.scss --exec \"sass styles/main.scss styles/main.css\"",
+    "format": "prettier --write script/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.21",
+    "prettier": "2.8.4",
+    "sass": "^1.59.3"
+  }
+}

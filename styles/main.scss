@@ -2,6 +2,8 @@
 @import "header";
 @import "general";
 @import "utility";
+@import "modal";
+
 
 main {
   width: 80%;
@@ -45,7 +47,7 @@ main {
 
         .product-price {
           text-align: center;
-          color: #ff4632;
+          color: $font-color3;
           font-size: 1.2rem;
           font-weight: 700;
         }
