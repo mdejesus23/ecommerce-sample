@@ -307,7 +307,9 @@ img {
     cursor: pointer;
     display: none;
   }
-  .main-header .menubtn .bar1, .main-header .menubtn .bar2, .main-header .menubtn .bar3 {
+  .main-header .menubtn .bar1,
+  .main-header .menubtn .bar2,
+  .main-header .menubtn .bar3 {
     width: 30px;
     height: 3px;
     background-color: white;
@@ -342,7 +344,9 @@ img {
     cursor: pointer;
     display: block;
   }
-  .main-header .menubtn .bar1, .main-header .menubtn .bar2, .main-header .menubtn .bar3 {
+  .main-header .menubtn .bar1,
+  .main-header .menubtn .bar2,
+  .main-header .menubtn .bar3 {
     width: 30px;
     height: 3px;
     background-color: white;
@@ -385,7 +389,9 @@ img {
     cursor: pointer;
     display: block;
   }
-  .main-header .menubtn .bar1, .main-header .menubtn .bar2, .main-header .menubtn .bar3 {
+  .main-header .menubtn .bar1,
+  .main-header .menubtn .bar2,
+  .main-header .menubtn .bar3 {
     width: 25px;
     height: 3px;
     background-color: white;
@@ -729,6 +735,66 @@ img {
     min-width: 80px;
   }
 }
+/* SASS Variables*/
+/* Override default style and set padding and margin to nothing */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  height: 3000px;
+}
+
+/* Make all link text black with no text decoration */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* No styling on list items */
+li {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Tablet screen */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+/* Mobile screen */
+@media (max-width: 580px) {
+  html {
+    font-size: 12px;
+  }
+}
+.text-center {
+  text-align: center;
+}
+.text-center h2 {
+  margin-bottom: 1rem;
+}
+.text-center .home-btn {
+  background-color: rgb(255, 70, 50);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
 main {
   width: 80%;
   margin: 0 auto;

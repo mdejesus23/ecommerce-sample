@@ -3,7 +3,7 @@
 @import "general";
 @import "utility";
 @import "modal";
-
+@import "cart";
 
 main {
   width: 80%;
@@ -23,7 +23,6 @@ main {
     font-size: 1.1rem;
   }
 
-   
   .grid-container {
     width: 100%;
     display: grid;
@@ -81,8 +80,6 @@ main {
     }
   }
 }
-
-
 
 @media (min-width: 1000.1px) {
   .grid-container {
@@ -147,7 +144,7 @@ main {
         grid-template-columns: 1fr 1fr;
         gap: 20px;
       }
-    }    
+    }
   }
 }
 
@@ -179,5 +176,3 @@ main {
     }
   }
 }
-
-  

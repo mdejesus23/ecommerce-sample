@@ -41,11 +41,11 @@ function renderItems() {
 renderItems();
 
 function showModal(modal, findItem) {
-    modal.style.display = "block";
-  
-    const { id, title, price, image } = findItem;
-  
-    modal.innerHTML = `
+  modal.style.display = "block";
+
+  const { id, title, price, image } = findItem;
+
+  modal.innerHTML = `
           <div class="modal-content">
               <span id="close-btn" class="close-btn" onclick="onCloseModal()">&times;</span>
               <div class="img-container">
@@ -66,7 +66,7 @@ function showModal(modal, findItem) {
               </div>
           </div>
       `;
-  }
+}
 
 function cartCounter() {
   document.getElementById("cart-counter").innerHTML =
