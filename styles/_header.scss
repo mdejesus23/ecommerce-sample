@@ -9,6 +9,13 @@
     width: 150px;
     height: auto;
   }
+
+  .tooltip {
+    @include tooltip-style;
+  }
+  &:hover .tooltip {
+    opacity: 1;
+  }
 }
 
 .right-section {
@@ -42,6 +49,7 @@
 
     .tooltip {
       @include tooltip-style;
+      left: -25px;
     }
 
     &:hover .tooltip {
@@ -82,9 +90,14 @@
       }
     }
 
+    .middle-section {
+
+    }
+
     .right-section {
       @include flex-container;
       justify-self: center;
+      margin-right: 40px;
     }
   }
 }

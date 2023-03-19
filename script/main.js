@@ -5,7 +5,9 @@ let cart = JSON.parse(localStorage.getItem("cartData")) || [];
 function addToCart(product) {
   const { prodId, findItem, numOfItem } = product;
 
-  if (findItem === undefined) {
+  if (numOfItem == 0) {
+    return;
+  } else if (findItem === undefined) {
     cart.push({
       id: prodId,
       itemQuantity: Number(numOfItem),
@@ -106,7 +108,7 @@ function onAddCart(id) {
     numOfItem: numOfItem,
   };
 
-  console.log(numOfItem);
+  // console.log(numOfItem);
   addToCart(product);
   cartCounter();
   saveCartItems();

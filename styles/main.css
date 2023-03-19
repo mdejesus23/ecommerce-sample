@@ -10,10 +10,6 @@ html {
   font-size: 16px;
 }
 
-body {
-  height: 3000px;
-}
-
 /* Make all link text black with no text decoration */
 a {
   color: white;
@@ -195,10 +191,6 @@ html {
   font-size: 16px;
 }
 
-body {
-  height: 3000px;
-}
-
 /* Make all link text black with no text decoration */
 a {
   color: white;
@@ -234,6 +226,25 @@ img {
 .middle-section .logo {
   width: 150px;
   height: auto;
+}
+.middle-section .tooltip {
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+.middle-section:hover .tooltip {
+  opacity: 1;
 }
 
 .right-section {
@@ -274,11 +285,11 @@ img {
   border-radius: 2px;
   font-size: 12px;
   bottom: -30px;
-  left: -20px;
   opacity: 0;
   pointer-events: none;
   white-space: nowrap;
   transition: opacity 0.15s;
+  left: -25px;
 }
 .right-section .addtocart-container:hover .tooltip {
   opacity: 1;
@@ -319,6 +330,7 @@ img {
     display: flex;
     align-items: center;
     justify-self: center;
+    margin-right: 40px;
   }
 }
 /*Desktop to tablet layout*/
@@ -425,10 +437,6 @@ html {
   font-size: 16px;
 }
 
-body {
-  height: 3000px;
-}
-
 /* Make all link text black with no text decoration */
 a {
   color: white;
@@ -466,10 +474,6 @@ img {
 
 html {
   font-size: 16px;
-}
-
-body {
-  height: 3000px;
 }
 
 /* Make all link text black with no text decoration */
@@ -530,7 +534,7 @@ img {
   right: 15px;
 }
 .modal .modal-content .close-btn:hover {
-  color: black;
+  color: rgb(255, 70, 50);
   text-decoration: none;
   cursor: pointer;
 }
@@ -584,6 +588,12 @@ img {
 .modal .modal-content .label .addToCart {
   background-color: rgb(255, 70, 50);
   color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  cursor: pointer;
   width: 100%;
   padding: 10px;
   border: none;
@@ -747,10 +757,6 @@ html {
   font-size: 16px;
 }
 
-body {
-  height: 3000px;
-}
-
 /* Make all link text black with no text decoration */
 a {
   color: white;
@@ -780,9 +786,20 @@ img {
 }
 .text-center {
   text-align: center;
+  margin: 25px;
 }
-.text-center h2 {
+.text-center h1 {
   margin-bottom: 1rem;
+}
+.text-center .clear-button {
+  background-color: rgb(255, 70, 50);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  cursor: pointer;
 }
 .text-center .home-btn {
   background-color: rgb(255, 70, 50);
@@ -793,6 +810,179 @@ img {
   font-weight: 700;
   font-size: 1.3rem;
   cursor: pointer;
+}
+
+.shopping-cart {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 3rem;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 250px;
+}
+.shopping-cart .product-card {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  position: relative;
+  width: 100%;
+}
+.shopping-cart .product-card .close-btn {
+  color: rgb(46, 41, 41);
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+}
+.shopping-cart .product-card .close-btn:hover {
+  color: rgb(255, 70, 50);
+  text-decoration: none;
+  cursor: pointer;
+}
+.shopping-cart .product-card .grid-item1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+  padding: 0.9rem;
+}
+.shopping-cart .product-card .grid-item1 img {
+  width: 100px;
+  min-width: 170px;
+}
+.shopping-cart .product-card .grid-item2 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background-color: rgb(240, 241, 243);
+}
+.shopping-cart .product-card .grid-item2 .product-price {
+  margin: auto;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.shopping-cart .product-card .grid-item2 .buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+.shopping-cart .product-card .grid-item2 .buttons-container .quantity {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.shopping-cart .product-card .grid-item2 .buttons-container i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+}
+
+@media (max-width: 580px) {
+  .shopping-cart {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 3rem;
+    margin: auto;
+    width: 100%;
+  }
+  .shopping-cart .product-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 100%;
+  }
+  .shopping-cart .product-card .grid-item1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    padding: 0.9rem;
+  }
+  .shopping-cart .product-card .grid-item1 .product-title {
+    margin-top: 20px;
+  }
+  .shopping-cart .product-card .grid-item1 img {
+    width: 150px;
+    min-width: 170px;
+  }
+  .shopping-cart .product-card .grid-item2 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+  .shopping-cart .product-card .grid-item2 .product-price {
+    margin: auto;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .shopping-cart .product-card .grid-item2 .buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .shopping-cart .product-card .grid-item2 .buttons-container .quantity {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: white;
+    margin: 0 30px;
+  }
+  .shopping-cart .product-card .grid-item2 .buttons-container i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+  }
+}
+/* SASS Variables*/
+/* Override default style and set padding and margin to nothing */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* Make all link text black with no text decoration */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* No styling on list items */
+li {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Tablet screen */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+/* Mobile screen */
+@media (max-width: 580px) {
+  html {
+    font-size: 12px;
+  }
+}
+footer {
+  background-color: rgb(95, 104, 116);
+  width: 100%;
+  height: 15rem;
+  margin-top: 35px;
+  color: white;
 }
 
 main {

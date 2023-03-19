@@ -14,7 +14,6 @@
   border-radius: 2px;
   font-size: 12px;
   bottom: -30px;
-  left: -20px;
   opacity: 0;
   pointer-events: none;
   white-space: nowrap;
@@ -24,4 +23,10 @@
 @mixin button-style {
   background-color: $bg-color2;
   color: $font-color1;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  cursor: pointer;
 }

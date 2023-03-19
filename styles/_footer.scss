@@ -1,0 +1,10 @@
+@import "utility";
+@import "general";
+
+footer {
+    background-color: $bg-color1;
+    width: 100%;
+    height: 15rem;
+    margin-top: 35px;
+    color: $font-color1;
+}
