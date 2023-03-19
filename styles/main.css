@@ -384,7 +384,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 2rem;
+    padding: 0 1rem;
     border-bottom: 1px solid gray;
     background-color: rgb(95, 104, 116);
     position: fixed;
@@ -784,6 +784,10 @@ img {
     font-size: 12px;
   }
 }
+.logo {
+  margin-left: -30px;
+}
+
 .text-center {
   text-align: center;
   margin: 25px;
@@ -1084,6 +1088,7 @@ main .grid-container .product-container:hover button {
 @media (max-width: 580px) {
   main {
     margin: 70px auto;
+    width: 94%;
   }
   main .banner-container {
     margin-bottom: 10px;
@@ -1106,6 +1111,7 @@ main .grid-container .product-container:hover button {
 @media (max-width: 320px) {
   main {
     margin: 70px auto;
+    width: 90%;
   }
   main .banner-container {
     margin-bottom: 10px;
