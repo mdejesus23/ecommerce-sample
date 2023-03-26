@@ -795,6 +795,16 @@ img {
 .text-center h1 {
   margin-bottom: 1rem;
 }
+.text-center .checkout-btn {
+  background-color: rgb(255, 70, 50);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
 .text-center .clear-button {
   background-color: rgb(255, 70, 50);
   color: white;
@@ -855,8 +865,7 @@ img {
   padding: 0.9rem;
 }
 .shopping-cart .product-card .grid-item1 img {
-  width: 100px;
-  min-width: 170px;
+  width: 150px;
 }
 .shopping-cart .product-card .grid-item2 {
   display: grid;
@@ -896,8 +905,8 @@ img {
   }
   .shopping-cart .product-card {
     display: grid;
-    grid-template-columns: 1fr;
-    height: auto;
+    grid-template-columns: 1f 1fr;
+    height: 200px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     width: 100%;
@@ -906,15 +915,14 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 1rem;
-    padding: 0.9rem;
+    padding: 0.5rem;
   }
   .shopping-cart .product-card .grid-item1 .product-title {
-    margin-top: 20px;
+    font-size: 1.2rem;
   }
   .shopping-cart .product-card .grid-item1 img {
-    width: 150px;
-    min-width: 170px;
+    width: 100px;
+    min-width: none;
   }
   .shopping-cart .product-card .grid-item2 {
     display: grid;

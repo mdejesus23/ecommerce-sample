@@ -71,6 +71,7 @@ function renderCartItems() {
     renderTotalAmmount();
     label.innerHTML = `
       <h1>Total Ammount: $${totalAmmount}</h1>
+      <button class="checkout-btn">Checkout</button>
       <button class="clear-button" onclick="onClearCart()">Clear</button>
       `;
   } else {
