@@ -3,124 +3,125 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-      .dropbtn {
-        background-color: #3498db;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-      }
+      .container {
+  overflow: hidden;
+}
 
-      .dropbtn:hover,
-      .dropbtn:focus {
-        background-color: #2980b9;
-      }
+.filterDiv {
+  float: left;
+  background-color: #2196F3;
+  color: #ffffff;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none; /* Hidden by default */
+}
 
-      .dropdown {
-        position: relative;
-        display: inline-block;
-      }
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
 
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        overflow: auto;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-      }
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
 
-      .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
+/* Add a light grey background on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
 
-      .show {
-        display: block;
-      }
-
-      .red {
-        background-color: red;
-      }
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: #666;
+  color: white;
+}
     </style>
   </head>
   <body>
-    <h2>Clickable Dropdown</h2>
-    <p>Click on the button to open the dropdown menu.</p>
+  <!-- Control buttons -->
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+  <button class="btn" onclick="filterSelection('animals')"> Animals</button>
+  <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
+  <button class="btn" onclick="filterSelection('colors')"> Colors</button>
+</div>
 
-    <div class="dropdown">
-      <div onclick="myFunction()" class="dropbtn">Dropdown</div>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <div onclick="myFunction()" class="dropbtn">Dropdown</div>
-      <div id="myDropdown2" class="dropdown-content">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <div id="button3" onclick="myFunction(button3)" class="dropbtn">
-        Dropdown
-      </div>
-      <div id="myDropdown3" class="dropdown-content">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
+<!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+<div class="container">
+  <div class="filterDiv cars">BMW</div>
+  <div class="filterDiv colors fruits">Orange</div>
+  <div class="filterDiv cars">Volvo</div>
+  <div class="filterDiv colors">Red</div>
+  <div class="filterDiv cars animals">Mustang</div>
+  <div class="filterDiv colors">Blue</div>
+  <div class="filterDiv animals">Cat</div>
+  <div class="filterDiv animals">Dog</div>
+  <div class="filterDiv fruits">Melon</div>
+  <div class="filterDiv fruits animals">Kiwi</div>
+  <div class="filterDiv fruits">Banana</div>
+  <div class="filterDiv fruits">Lemon</div>
+  <div class="filterDiv animals">Cow</div>
+</div>
 
     <script>
-      function closeDropdowns() {
-        // Get all the dropdown elements
-        let dropdowns = document.getElementsByClassName("dropdown-content");
-        // Loop through all the dropdown elements and hide them
-        for (let i = 0; i < dropdowns.length; i++) {
-          let openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains("show")) {
-            openDropdown.classList.remove("show");
-          }
-        }
-      }
+filterSelection("all")
 
-      document.addEventListener("click", function (event) {
-        // If the user clicks outside of the dropdown, close it
-        if (!event.target.matches(".dropbtn")) {
-          closeDropdowns();
-        }
-      });
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    removeClass(x[i], "show"); // remove "show" classname first.
+    if (x[i].className.indexOf(c) > -1) {
+      console.log("greater than -1");
+      addClass(x[i], "show");
+    }
+  }
+}
 
-      let dropdownButtons = document.querySelectorAll(".dropbtn");
-      dropdownButtons.forEach(function (button) {
-        button.addEventListener("click", function (event) {
-          // Close any other open dropdown menus
-          let openMenus = document.querySelectorAll(".dropdown-content.show");
-          openMenus.forEach(function (menu) {
-            menu.classList.remove("show");
-          });
+// Show filtered elements
+function addClass(element, name) {
+  
+  const arr1 = element.className.split(" ");
+  
+  
+    if (arr1.indexOf(name) == -1) {
+      element.className += " " + name;
+    }
+  
+}
 
-          // Open the specific dropdown menu that was clicked on
-          let dropdownMenu = button.nextElementSibling;
-          dropdownMenu.classList.add("show");
-        });
-      });
+// Hide elements that are not selected
+function removeClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  
+    if (arr1.indexOf(name) > -1) {
+      arr1.splice(arr1.indexOf(name), 1);
+    }
+  
+  element.className = arr1.join(" ");
+}
 
-      /* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-      function myFunction(x) {
-        x.classList.toggle("red");
-      }
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
     </script>
   </body>
 </html>

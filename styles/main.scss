@@ -31,7 +31,7 @@ main {
     gap: 70px;
 
     .product-container {
-      display: flex;
+      display: none;
       flex-direction: column;
       justify-content: space-between;
       position: relative;
@@ -78,6 +78,10 @@ main {
       &:hover button {
         visibility: visible;
       }
+    }
+
+    .show-item {
+      display: flex;
     }
   }
 }

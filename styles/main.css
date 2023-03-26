@@ -1093,7 +1093,7 @@ main .grid-container {
   gap: 70px;
 }
 main .grid-container .product-container {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
@@ -1135,6 +1135,9 @@ main .grid-container .product-container button:active {
 }
 main .grid-container .product-container:hover button {
   visibility: visible;
+}
+main .grid-container .show-item {
+  display: flex;
 }
 
 @media (min-width: 1000.1px) {

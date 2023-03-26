@@ -29,7 +29,7 @@ function renderItems() {
   shopList.forEach((item) => {
     let { id, title, price, image, classNames } = item;
     shopListContainer.innerHTML += `
-        <div id=${id} class=${classNames}>
+        <div id=${id} class="${classNames}">
             <img src=${image} alt="" />
             <div class="product-label">
                 <p class="product-title">${title}</p>
