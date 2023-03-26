@@ -30,3 +30,14 @@
   font-size: 1.3rem;
   cursor: pointer;
 }
+
+@mixin button-style2 {
+  background-color: $bg-color1;
+  color: $font-color1;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  cursor: pointer;
+}

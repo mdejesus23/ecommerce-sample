@@ -72,7 +72,7 @@ function renderCartItems() {
     label.innerHTML = `
       <h1>Total Ammount: $${totalAmmount}</h1>
       <button class="checkout-btn">Checkout</button>
-      <button class="clear-button" onclick="onClearCart()">Clear</button>
+      <button class="clear-button" onclick="onShowCartModal()">Clear</button>
       `;
   } else {
     shoppingCart.innerHTML = ``;
@@ -86,6 +86,26 @@ function renderCartItems() {
 }
 
 renderCartItems();
+
+function onShowCartModal() {
+  const modal = document.getElementById("cart-modal");
+  modal.style.display = "block";
+
+  modal.innerHTML = `
+    <div class="modal-cart-content">
+      <p>Are you sure do you want to clear your Cart?</p>
+      <div class="confirm-buttons">
+        <button class="no-button" onclick="onCloseCartModal()">No</button>
+        <button class="yes-button" onclick="onClearCart()">Yes</button>
+      </div>
+    </div>
+  `;
+}
+
+function onCloseCartModal() {
+  const modal = document.getElementById("cart-modal");
+  modal.style.display = "none";
+}
 
 function renderTotalAmmount() {
   totalAmmount = cart
@@ -132,9 +152,12 @@ function onDelete(id) {
 }
 
 function onClearCart() {
+  onCloseCartModal()
   clearCart();
   cartCounter();
   saveCartItems();
   renderTotalAmmount();
   renderCartItems();
 }
+
+
