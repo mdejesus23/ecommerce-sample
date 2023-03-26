@@ -48,9 +48,8 @@
           >T-SHIRT</a
         >
         <div id="dd-tshirt" class="dropdown-content">
-          <a onclick="">ALL T-SHIRTS</a>
-          <a>PLUS SIZED</a>
-          <a>V-NECKS</a>
+          <a onclick="filterItems('t-shirt')">ALL T-SHIRTS</a>
+          <a onclick="filterItems('v-neck')">V-NECKS</a>
         </div>
       </div>
 
@@ -59,9 +58,9 @@
           >MEN</a
         >
         <div id="dd-men" class="dropdown-content">
-          <a>ALL MEN</a>
-          <a>MEN T-SHIRT</a>
-          <a>MEN HOODIES</a>
+          <a onclick="filterItems('men')">ALL MEN</a>
+          <a onclick="filterItems('men-tshirt')">MEN T-SHIRT</a>
+          <a onclick="filterItems('men-hoodies')">MEN HOODIES</a>
         </div>
       </div>
 
@@ -70,9 +69,9 @@
           >WOMEN</a
         >
         <div id="dd-women" class="dropdown-content">
-          <a>ALL WOMEN</a>
-          <a>WOMEN T-SHIRT</a>
-          <a>WOMEN HOODIES</a>
+          <a onclick="filterItems('women')">ALL WOMEN</a>
+          <a onclick="filterItems('women-tshirt')">WOMEN T-SHIRT</a>
+          <a onclick="filterItems('women-hoodie')">WOMEN HOODIES</a>
         </div>
       </div>
 
@@ -82,8 +81,8 @@
         >
         <div id="dd-kids" class="dropdown-content">
           <a onclick="filterItems('kids')">ALL KIDS</a>
-          <a>KIDS 4-7</a>
-          <a>YOUTH 6-20</a>
+          <a onclick="filterItems('kids-4-7')">KIDS 4-7</a>
+          <a onclick="filterItems('kids-youth')">YOUTH 6-20</a>
         </div>
       </div>
 
@@ -94,9 +93,9 @@
           >OTHER APPAREL</a
         >
         <div id="dd-other-apparel" class="dropdown-content">
-          <a>SWEATSHIRTS & HOODIES</a>
-          <a>HOODIES</a>
-          <a>LONG SLEEVE SHIRTS</a>
+          <a onclick="filterItems('sweat-hoodies')">SWEATSHIRTS & HOODIES</a>
+          <a onclick="filterItems('hoodie')">HOODIES</a>
+          <a onclick="filterItems('long-sleeve')">LONG SLEEVE SHIRTS</a>
         </div>
       </div>
 
@@ -141,8 +140,5 @@
     <script src="script/script.js"></script>
     <script src="script/main.js"></script>
     <script src="script/nav.js"></script>
-    <script src="script/filter.js"></script>
-
-
   </body>
 </html>
