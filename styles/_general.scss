@@ -3,6 +3,7 @@ $bg-color1: rgb(95, 104, 116);
 $bg-color2: rgb(255, 70, 50);
 $bg-color3: white;
 $bg-color4: rgb(240, 241, 243);
+$bg-color5: rgb(255, 70, 50);
 $font-color1: white;
 $font-color2: rgb(46, 41, 41);
 $font-color3: rgb(255, 70, 50);
@@ -36,6 +37,11 @@ li {
 
 img {
   width: 100%;
+}
+
+@media (min-width: 1000.1px) {
+
+  
 }
 
 /* Tablet screen */

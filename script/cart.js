@@ -127,6 +127,7 @@ function onCartDecrement(id) {
   saveCartItems();
   renderTotalAmmount();
   renderCartItems();
+  bumpCartButton();
 }
 
 // increment function
@@ -138,6 +139,7 @@ function onCartIncrement(id) {
   saveCartItems();
   renderTotalAmmount();
   renderCartItems();
+  bumpCartButton();
 }
 
 function onDelete(id) {
@@ -149,6 +151,7 @@ function onDelete(id) {
   saveCartItems();
   renderTotalAmmount();
   renderCartItems();
+  bumpCartButton();
 }
 
 function onClearCart() {
@@ -158,6 +161,7 @@ function onClearCart() {
   saveCartItems();
   renderTotalAmmount();
   renderCartItems();
+  bumpCartButton();
 }
 
 

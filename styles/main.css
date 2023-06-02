@@ -41,7 +41,7 @@ img {
   nav {
     width: 80%;
     height: 65px;
-    margin: 100px auto 13px auto;
+    margin: 150px auto 13px auto;
     background-color: rgb(95, 104, 116);
     border-bottom: 3px solid rgb(255, 70, 50);
     padding: 0 5rem;
@@ -104,7 +104,8 @@ img {
     position: fixed;
     left: 0;
     bottom: 0;
-    top: 50px;
+    top: 100px;
+    z-index: 99;
   }
   nav .dropdown {
     position: relative;
@@ -165,7 +166,7 @@ img {
     position: fixed;
     left: 0;
     bottom: 0;
-    top: 50px;
+    top: 100px;
     z-index: 99;
   }
   nav .user-section a {
@@ -218,16 +219,21 @@ img {
     font-size: 12px;
   }
 }
-.middle-section {
+.main-header {
+  height: 100px;
+  margin-bottom: 200px;
+}
+.main-header .middle-section {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 150px;
 }
-.middle-section .logo {
+.main-header .middle-section .logo {
   width: 150px;
   height: auto;
 }
-.middle-section .tooltip {
+.main-header .middle-section .tooltip {
   position: absolute;
   background-color: gray;
   color: white;
@@ -243,28 +249,32 @@ img {
   white-space: nowrap;
   transition: opacity 0.15s;
 }
-.middle-section:hover .tooltip {
+.main-header .middle-section:hover .tooltip {
   opacity: 1;
 }
-
-.right-section {
-  display: flex;
-  align-items: center;
+.main-header .right-section {
+  width: 150px;
+  padding: 10px;
+  border-radius: 50px;
   justify-content: center;
+  background-color: rgb(255, 70, 50);
+  border: none;
 }
-.right-section .right-section a {
+.main-header .right-section a {
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
 }
-.right-section .addtocart-container {
+.main-header .right-section .addtocart-container {
+  display: flex;
+  align-items: center;
   position: relative;
 }
-.right-section .addtocart-container .addtocart-icon {
+.main-header .right-section .addtocart-container .addtocart-icon {
   height: 23px;
 }
-.right-section .addtocart-container .addtocart-counter {
-  background-color: rgb(255, 70, 50);
+.main-header .right-section .addtocart-container .addtocart-counter {
+  background-color: rgb(95, 104, 116);
   color: white;
   font-weight: 500;
   font-size: 11px;
@@ -274,7 +284,7 @@ img {
   top: -5px;
   right: -8px;
 }
-.right-section .addtocart-container .tooltip {
+.main-header .right-section .addtocart-container .tooltip {
   position: absolute;
   background-color: gray;
   color: white;
@@ -291,10 +301,31 @@ img {
   transition: opacity 0.15s;
   left: -25px;
 }
-.right-section .addtocart-container:hover .tooltip {
+.main-header .right-section .addtocart-container:hover .tooltip {
   opacity: 1;
 }
 
+.bump {
+  animation: bump 300ms ease-out;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /*Desktop layout*/
 @media (min-width: 1000.1px) {
   .main-header {
@@ -308,7 +339,7 @@ img {
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
+    height: 100px;
     z-index: 99;
   }
   .main-header .menubtn {
@@ -330,7 +361,6 @@ img {
     display: flex;
     align-items: center;
     justify-self: center;
-    margin-right: 40px;
   }
 }
 /*Desktop to tablet layout*/
@@ -346,10 +376,11 @@ img {
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
+    height: 100px;
     z-index: 99;
   }
   .main-header .menubtn {
+    width: 150px;
     display: flex;
     align-items: center;
     justify-self: center;
@@ -384,17 +415,19 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1rem;
+    padding: 0 1.7rem;
     border-bottom: 1px solid gray;
     background-color: rgb(95, 104, 116);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
+    height: 100px;
     z-index: 99;
   }
   .main-header .menubtn {
+    width: 100px;
+    padding-left: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -418,7 +451,11 @@ img {
   .main-header .change .bar3 {
     transform: translate(0, -11px) rotate(45deg);
   }
+  .main-header .middle-section {
+    width: 100px;
+  }
   .main-header .right-section {
+    width: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1057,18 +1094,13 @@ img {
 footer {
   background-color: rgb(95, 104, 116);
   width: 100%;
-  height: 5rem;
+  height: 100px;
   margin-top: 35px;
   color: white;
   display: flex;
   align-items: center;
-}
-footer .footer-text {
-  margin: auto;
-  text-align: center;
-  font-weight: 600;
-  padding: 5px;
-  border-bottom: 2px solid rgb(255, 70, 50);
+  justify-content: center;
+  column-gap: 0.5rem;
 }
 
 main {
@@ -1150,7 +1182,7 @@ main .grid-container .show-item {
 }
 @media (max-width: 1000px) {
   main {
-    margin: 80px auto;
+    margin: 120px auto 80px auto;
   }
   main .banner-container {
     margin-bottom: 20px;
@@ -1172,7 +1204,7 @@ main .grid-container .show-item {
 }
 @media (max-width: 580px) {
   main {
-    margin: 70px auto;
+    margin: 120px auto 70px auto;
     width: 94%;
   }
   main .banner-container {

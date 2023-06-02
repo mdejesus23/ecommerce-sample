@@ -4,16 +4,10 @@
 footer {
     background-color: $bg-color1;
     width: 100%;
-    height: 5rem;
+    height: 100px;
     margin-top: 35px;
     color: $font-color1;
     @include flex-container;
-
-    .footer-text {
-        margin: auto;
-        text-align: center;
-        font-weight: 600;
-        padding: 5px;
-        border-bottom: 2px solid $bg-color2;
-    }
+    justify-content: center;
+    column-gap: 0.5rem;
 }

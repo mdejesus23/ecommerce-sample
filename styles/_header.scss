@@ -1,62 +1,98 @@
 @import "utility";
 @import "general";
 
-.middle-section {
-  @include flex-container;
-  justify-content: center;
+.main-header {
+  height: 100px;
+  margin-bottom: 200px;
 
-  .logo {
+  .middle-section {
+    @include flex-container;
+    justify-content: center;
     width: 150px;
-    height: auto;
-  }
-
-  .tooltip {
-    @include tooltip-style;
-  }
-  &:hover .tooltip {
-    opacity: 1;
-  }
-}
-
-.right-section {
-  @include flex-container;
-  justify-content: center;
-
-  .right-section a {
-    font-weight: 700;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-
-  .addtocart-container {
-    position: relative;
-
-    .addtocart-icon {
-      height: 23px;
+    
+  
+    .logo {
+      width: 150px;
+      height: auto;
     }
-
-    .addtocart-counter {
-      background-color: $bg-color2;
-      color: white;
-      font-weight: 500;
-      font-size: 11px;
-      padding: 3px 5px;
-      border-radius: 7px;
-      position: absolute;
-      top: -5px;
-      right: -8px;
-    }
-
+  
     .tooltip {
       @include tooltip-style;
-      left: -25px;
     }
-
     &:hover .tooltip {
       opacity: 1;
     }
   }
+  
+  .right-section {
+    width: 150px;
+    padding: 10px;
+    border-radius: 50px;
+    justify-content: center;
+    background-color: $bg-color5;
+    border: none;
+    a {
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  
+    .addtocart-container {
+      @include flex-container;
+      
+      position: relative;
+  
+      .addtocart-icon {
+        height: 23px;
+      }
+  
+      .addtocart-counter {
+        background-color: $bg-color1;
+        color: white;
+        font-weight: 500;
+        font-size: 11px;
+        padding: 3px 5px;
+        border-radius: 7px;
+        position: absolute;
+        top: -5px;
+        right: -8px;
+      }
+  
+      .tooltip {
+        @include tooltip-style;
+        left: -25px;
+      }
+  
+      &:hover .tooltip {
+        opacity: 1;
+      }
+    }
+  }
 }
+
+.bump {
+  animation: bump 300ms ease-out;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
 
 /*Desktop layout*/
 @media (min-width: 1000.1px) {
@@ -67,11 +103,12 @@
     border-bottom: 1px solid gray;
     background-color: $bg-color1;
 
+
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
+    height: 100px;
     z-index: 99;
 
     .menubtn {
@@ -97,7 +134,6 @@
     .right-section {
       @include flex-container;
       justify-self: center;
-      margin-right: 40px;
     }
   }
 }
@@ -115,10 +151,11 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
+    height: 100px;
     z-index: 99;
 
     .menubtn {
+      width: 150px;
       @include flex-container;
       justify-self: center;
       cursor: pointer;
@@ -159,7 +196,7 @@
   .main-header {
     @include flex-container;
     justify-content: space-between;
-    padding: 0 1rem;
+    padding: 0 1.7rem;
     border-bottom: 1px solid gray;
     background-color: $bg-color1;
 
@@ -167,10 +204,12 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
+    height: 100px;
     z-index: 99;
 
     .menubtn {
+      width: 100px;
+      padding-left: 20px;
       @include flex-container;
       justify-content: center;
       cursor: pointer;
@@ -200,7 +239,13 @@
       }
     }
 
+    .middle-section {
+      width: 100px;
+    }
+
+
     .right-section {
+      width: 100px;
       @include flex-container;
       justify-content: center;
       min-width: 40px;

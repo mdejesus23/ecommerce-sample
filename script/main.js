@@ -112,6 +112,7 @@ function onAddCart(id) {
   addToCart(product);
   cartCounter();
   saveCartItems();
+  bumpCartButton();
 }
 
 function onViewItem(id) {

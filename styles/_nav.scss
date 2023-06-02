@@ -4,7 +4,7 @@
   nav {
     width: 80%;
     height: 65px;
-    margin: 100px auto 13px auto;
+    margin: 150px auto 13px auto;
     background-color: $bg-color1;
     border-bottom: 3px solid $bg-color2;
     padding: 0 5rem;
@@ -78,7 +78,9 @@
     position: fixed;
     left: 0;
     bottom: 0;
-    top: 50px;
+    top: 100px;
+    z-index: 99;
+
 
     .dropdown {
       position: relative;
@@ -145,12 +147,13 @@
 @media (max-width: 580px) {
   nav {
     display: none;
+
     width: 200px;
     background-color: $bg-color1;
     position: fixed;
     left: 0;
     bottom: 0;
-    top: 50px;
+    top: 100px;
     z-index: 99;
 
     .user-section {

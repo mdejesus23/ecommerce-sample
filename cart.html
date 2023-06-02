@@ -20,24 +20,34 @@
         </div>
       </a>
 
-      <div class="right-section">
-        <div class="addtocart-container">
-          <img
-            src="icons/addtocart3.png"
-            class="addtocart-icon"
-            alt="add to cart icon"
-          />
-          <div id="cart-counter" class="addtocart-counter">0</div>
-          <div class="tooltip">Add to Cart</div>
-        </div>
-      </div>
+      <button class="right-section" id="cart-button">
+        <a href="cart.html">
+          <div class="addtocart-container">
+            <img
+              src="icons/addtocart3.png"
+              class="addtocart-icon"
+              alt="add to cart icon"
+            />
+            <div id="cart-counter" class="addtocart-counter">0</div>
+            <div class="tooltip">Add to Cart</div>
+          </div>
+        </a>
+      </button>
     </header>
     <main style="margin-top: 100px">
       <div id="label" class="text-center"></div>
       <div class="modal" id="cart-modal"></div>
       <div class="shopping-cart" id="shopping-cart"></div>
     </main>
+    <footer>
+      <p>&copy;</p>
+      <p class="footer-text"></p>
+      <a href="https://melnerdz.com/" target="_blank">melnerdz.com</a>
+    </footer>
     <script src="script/data.js"></script>
     <script src="script/cart.js"></script>
+    <script src="script/cart-button.js"></script>
+    <script src="script/footer.js"></script>
+
   </body>
 </html>
