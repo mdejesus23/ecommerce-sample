@@ -1,6 +1,10 @@
 // Model
 // if cart has an item load it to the browser. if does not have ? assign an empty array.
+let shopItems = [];
+let errorMessage = null;
 let cart = JSON.parse(localStorage.getItem("cartData")) || [];
+let shopListContainer = document.getElementById("item-list-container");
+
 
 function addToCart(product) {
   const { prodId, findItem, numOfItem } = product;
@@ -22,25 +26,62 @@ function saveCartItems() {
   localStorage.setItem("cartData", JSON.stringify(cart));
 }
 
+
+async function fetchShopItems() {
+  try {
+    const response = await fetch("https://ecommerce-data-6721a-default-rtdb.firebaseio.com/shop-item.json");
+    console.log("fetching data!");
+
+    if (!response.ok) {
+      throw new Error("Something went wrong!")
+    }
+
+    const data = await response.json();
+    // console.log(data[item1]);
+
+    for (const key in data) {
+      shopItems.push({
+        id: data[key].id,
+        title: data[key].title,
+        price: data[key].price,
+        image: data[key].image,
+        classNames: data[key].classNames
+      })
+    }
+
+    renderItems();
+    // from menu.js
+    filterItems("all"); 
+
+  } catch (error) {
+    shopListContainer.innerHTML = `<p class="error">${error.message} data please try again!</p>`;
+  }
+  
+  
+}
+fetchShopItems();
+
+
 // View
 function renderItems() {
-  const shopListContainer = document.getElementById("item-list-container");
+  console.log("rendering data");
 
-  shopList.forEach((item) => {
-    let { id, title, price, image, classNames } = item;
-    shopListContainer.innerHTML += `
-        <div id=${id} class="${classNames}">
-            <img src=${image} alt="" />
-            <div class="product-label">
-                <p class="product-title">${title}</p>
-                <p class="product-price">$ ${price}</p>
-            </div>
-            <button class="add-to-cart-btn" onclick="onViewItem('${id}')">View</button>
-        </div>
-        `;
-  });
+    let html = '';
+    shopItems.forEach((item) => {
+      const { id, title, price, image, classNames } = item;
+      html += `
+          <div id=${id} class="${classNames}">
+              <img src=${image} alt="" loading="lazy" />
+              <div class="product-label">
+                  <p class="product-title">${title}</p>
+                  <p class="product-price">$ ${price}</p>
+              </div>
+              <button class="add-to-cart-btn" onclick="onViewItem('${id}')">View</button>
+          </div>
+          `;
+    });
+  shopListContainer.innerHTML = html;
 }
-renderItems();
 
 function showModal(modal, findItem) {
   modal.style.display = "block";
@@ -117,7 +158,7 @@ function onAddCart(id) {
 
 function onViewItem(id) {
   const prodId = id;
-  const findItem = shopList.find((item) => item.id === prodId);
+  const findItem = shopItems.find((item) => item.id === prodId);
   let modal = document.getElementById("modal");
 
   showModal(modal, findItem);
@@ -126,3 +167,5 @@ function onViewItem(id) {
 function onCloseModal() {
   document.getElementById("modal").style.display = "none";
 }
+
+// cart script

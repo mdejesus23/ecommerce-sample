@@ -3,6 +3,8 @@ const label = document.getElementById("label");
 const shoppingCart = document.getElementById("shopping-cart");
 let cart = JSON.parse(localStorage.getItem("cartData")) || [];
 let totalAmmount;
+let shopItems = [];
+
 
 function cartCounter() {
   document.getElementById("cart-counter").innerHTML =
@@ -39,6 +41,41 @@ function clearCart() {
   cart = [];
 }
 
+async function fetchShopItems() {
+  try {
+    const response = await fetch("https://ecommerce-data-6721a-default-rtdb.firebaseio.com/shop-item.json");
+    console.log("fetching data!");
+
+    if (!response.ok) {
+      throw new Error("Something went wrong!")
+    }
+
+    const data = await response.json();
+    // console.log(data[item1]);
+
+
+    for (const key in data) {
+      shopItems.push({
+        id: data[key].id,
+        title: data[key].title,
+        price: data[key].price,
+        image: data[key].image,
+        classNames: data[key].classNames
+      })
+    }
+    
+    // console.log(shopItems);
+    // from menu.js
+    renderCartItems();
+    
+  } catch(error){
+    // console.log(error.message);
+    errorMessage = error.message;
+    console.log(errorMessage); // Log the error message to the console
+  }
+}
+fetchShopItems();
+
 // View Section
 
 function renderCartItems() {
@@ -47,7 +84,7 @@ function renderCartItems() {
 
   if (cart.length !== 0) {
     cart.forEach((item) => {
-      const findItem = shopList.find((prod) => prod.id === item.id);
+      const findItem = shopItems.find((prod) => prod.id === item.id);
       const { id, title, price, image } = findItem;
       shoppingCart.innerHTML += `
         <div class="product-card">
@@ -74,6 +111,8 @@ function renderCartItems() {
       <button class="checkout-btn">Checkout</button>
       <button class="clear-button" onclick="onShowCartModal()">Clear</button>
       `;
+
+      console.log('render cart');
   } else {
     shoppingCart.innerHTML = ``;
     label.innerHTML = `
@@ -84,8 +123,7 @@ function renderCartItems() {
       `;
   }
 }
-
-renderCartItems();
+// renderCartItems();
 
 function onShowCartModal() {
   const modal = document.getElementById("cart-modal");

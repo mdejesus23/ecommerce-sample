@@ -426,8 +426,7 @@ img {
     z-index: 99;
   }
   .main-header .menubtn {
-    width: 100px;
-    padding-left: 20px;
+    width: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -455,7 +454,7 @@ img {
     width: 100px;
   }
   .main-header .right-section {
-    width: 100px;
+    width: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -829,14 +828,14 @@ body {
   margin-left: -30px;
 }
 
-.text-center {
+main .text-center {
   text-align: center;
   margin: 25px;
 }
-.text-center h1 {
+main .text-center h1 {
   margin-bottom: 1rem;
 }
-.text-center .checkout-btn {
+main .text-center .checkout-btn {
   background-color: rgb(255, 70, 50);
   color: white;
   padding: 10px;
@@ -846,7 +845,7 @@ body {
   font-size: 1.3rem;
   cursor: pointer;
 }
-.text-center .clear-button {
+main .text-center .clear-button {
   background-color: rgb(255, 70, 50);
   color: white;
   padding: 10px;
@@ -856,7 +855,7 @@ body {
   font-size: 1.3rem;
   cursor: pointer;
 }
-.text-center .home-btn {
+main .text-center .home-btn {
   background-color: rgb(255, 70, 50);
   color: white;
   padding: 10px;
@@ -1123,6 +1122,9 @@ main .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 70px;
+}
+main .grid-container .error {
+  color: red;
 }
 main .grid-container .product-container {
   display: none;

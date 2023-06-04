@@ -10,25 +10,29 @@ body {
 }
 
 // styles for label container
-.text-center {
-  text-align: center;
-  margin: 25px;
-  h1 {
-    margin-bottom: 1rem;
-  }
+main {
 
-  .checkout-btn {
-    @include button-style;
-  }
-
-  .clear-button {
-    @include button-style;
-  }
-
-  .home-btn {
-    @include button-style;
+  .text-center {
+    text-align: center;
+    margin: 25px;
+    h1 {
+      margin-bottom: 1rem;
+    }
+  
+    .checkout-btn {
+      @include button-style;
+    }
+  
+    .clear-button {
+      @include button-style;
+    }
+  
+    .home-btn {
+      @include button-style;
+    }
   }
 }
+
 
 // cart modal
 .modal {

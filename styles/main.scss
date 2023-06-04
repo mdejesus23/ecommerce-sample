@@ -30,6 +30,10 @@ main {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 70px;
 
+    .error {
+      color: red;
+    }
+
     .product-container {
       display: none;
       flex-direction: column;
