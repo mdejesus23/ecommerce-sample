@@ -57,7 +57,6 @@ async function fetchShopItems() {
     shopListContainer.innerHTML = `<p class="error">${error.message} data please try again!</p>`;
   }
   
-  
 }
 fetchShopItems();
 

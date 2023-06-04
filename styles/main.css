@@ -825,9 +825,12 @@ body {
 }
 
 .logo {
-  margin-left: -30px;
+  margin-left: -65px;
 }
 
+main {
+  margin-top: 160px;
+}
 main .text-center {
   text-align: center;
   margin: 25px;
@@ -1104,7 +1107,7 @@ footer {
 
 main {
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 60px auto;
 }
 main .banner-container {
   margin-bottom: 30px;
@@ -1184,7 +1187,7 @@ main .grid-container .show-item {
 }
 @media (max-width: 1000px) {
   main {
-    margin: 120px auto 80px auto;
+    margin: 150px auto 80px auto;
   }
   main .banner-container {
     margin-bottom: 20px;
@@ -1206,7 +1209,7 @@ main .grid-container .show-item {
 }
 @media (max-width: 580px) {
   main {
-    margin: 120px auto 70px auto;
+    margin: 150px auto 70px auto;
     width: 94%;
   }
   main .banner-container {
@@ -1229,7 +1232,7 @@ main .grid-container .show-item {
 }
 @media (max-width: 320px) {
   main {
-    margin: 70px auto;
+    margin: 150px auto 50px auto;
     width: 90%;
   }
   main .banner-container {
