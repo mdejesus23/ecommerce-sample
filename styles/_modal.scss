@@ -18,8 +18,9 @@
     margin: auto;
     padding: 40px;
     border: 1px solid $bg-color1;
-    width: 90%;
+    width: 70%;
     position: relative;
+    
 
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -106,7 +107,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -124,7 +125,7 @@
       margin: auto;
       padding: 40px;
       border: 1px solid $bg-color1;
-      width: 90%;
+      width: 65%;
       position: relative;
 
       display: grid;

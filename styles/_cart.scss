@@ -9,6 +9,8 @@ body {
 // styles for label container
 main {
     margin-top: 140px;
+    min-height: 100vh;
+    max-height: 100%;
 
 
     
@@ -98,7 +100,6 @@ main {
   width: 70%;
   margin: auto;
   margin-bottom: 250px;
-  height: 100vh;
 
 
   .product-card {

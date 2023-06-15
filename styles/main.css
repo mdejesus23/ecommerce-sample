@@ -558,7 +558,7 @@ img {
   margin: auto;
   padding: 40px;
   border: 1px solid rgb(95, 104, 116);
-  width: 90%;
+  width: 70%;
   position: relative;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -641,7 +641,7 @@ img {
   width: 20rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -659,7 +659,7 @@ img {
     margin: auto;
     padding: 40px;
     border: 1px solid rgb(95, 104, 116);
-    width: 90%;
+    width: 65%;
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
@@ -828,6 +828,8 @@ body {
 
 main {
   margin-top: 140px;
+  min-height: 100vh;
+  max-height: 100%;
 }
 main .text-center {
   text-align: center;
@@ -937,7 +939,6 @@ main .text-center .home-btn {
   width: 70%;
   margin: auto;
   margin-bottom: 250px;
-  height: 100vh;
 }
 .shopping-cart .product-card {
   display: grid;
